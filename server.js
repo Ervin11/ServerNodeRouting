@@ -52,7 +52,7 @@ app.all('/', (req, res, next) => {
 app.post('/todos', (req, res) => {
     
     let dt = dateTime.create();
-    let time = dt.format('d/m/Y');
+    let time = dt.format('d/M/Y');
 
     db.open('todolist.db').then(() => {
         
