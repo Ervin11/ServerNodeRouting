@@ -1,6 +1,6 @@
 # Server Routing
 
-Site de visualisation de tâches à faire :
+Site de visualisation de tâches à faire.
 
 # Users
 
