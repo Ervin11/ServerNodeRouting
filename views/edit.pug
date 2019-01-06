@@ -1,0 +1,55 @@
+html(lang='en')
+  head
+    title Todos
+    style
+      include style.css
+
+  body
+    .container1  
+
+    if route == '/todos/:todoId/edit'
+
+      h1.todo Edit To-do
+      .col
+        each val in todo  
+          ul
+            form.edit(method="POST" action=`/todos/${val.id}?_method=PATCH`)
+
+                span.editTitle Title
+                input.editTitle(type='text', value=val.title, name="title")
+                br
+                span.editMessage Message
+                textarea.editMessage(cols="10", rows="10", name="message")=val.message
+                br
+                span.editCompletion Completion
+                select.editCompletion(size="1", name="completion")    
+                    option(type='text', value="To do") To do
+                    option(type='text', value="In progress") In progress 
+                    option(type='text', value="Done") Done
+                br
+                input(type="submit" value="Submit")
+    else
+
+      h1.todo Add To-do
+      .col 
+        ul
+          form.edit(method="POST" action=`/todos`)
+
+            span.editTitle Title
+            input.editTitle(type='text', name="title")
+            br
+            span.editMessage Message
+            textarea.editMessage(cols="10", rows="10", name="message")
+            br
+            span.editCompletion Completion
+            select.editCompletion(size="1", name="completion")    
+                option(type='text', value="To do") To do
+                option(type='text', value="In progress") In progress 
+                option(type='text', value="Done") Done
+            br
+            span.editCompletion User
+            select.editCompletion(size="1", name="user")    
+                each val in todo
+                  option(type='text', name="user", value=val.user_id) #{val.firstname} #{val.lastname}
+            br
+            input(type="submit" value="Submit")              

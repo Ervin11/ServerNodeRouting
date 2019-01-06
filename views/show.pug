@@ -1,0 +1,28 @@
+html(lang='en')
+  head
+    title Todos
+    style
+      include style.css
+
+  body
+    .container1  
+      h1.todo To-do
+      .col
+        each val in todo  
+          ul
+            h3= val.id + ' : ' + val.title
+
+            .message
+              p= val.message 
+
+            li.index Start : #{val.created_at}
+            li.index Status : #{val.completion}
+
+          form.edit_button(method="GET" action=`/todos/${val.id}/edit`)
+              input.edit_button(type="submit" value="Edit")
+          
+          form.check(method="POST" action=`/todos/${val.id}?_method=DELETE`)
+              input.trash(type="submit" value="Delete")
+            
+
+      

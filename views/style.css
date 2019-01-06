@@ -1,33 +1,60 @@
 html {
-    width:900px;
-    margin: auto;
+    margin: 0px;
+    padding: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
-    margin-top: 5%;
-    margin-left: 10%; 
-    background-color: rgb(156, 156, 165);
+    margin-left: 5%; 
+    background-color: rgb(82, 81, 81);
+}
+
+.container1 {
+    float: left;
+}
+
+.container2 {
+    float: right;
+    margin-right: 5%;
 }
 
 .col {
     color: white;
     width: 500px;
-    background-color: brown;
+    background-color:#426EB8;
     padding: 10px;
-    padding-top: 24px;
+    padding-top: 40px;
     padding-bottom: 60px;
-    margin-left: 10%;
     box-shadow: 1px 1px 10px black;
-    border-radius: 2%;
+    border: 2px solid white;
+    margin-top: 8%; 
+
+    
+
+}
+
+.col2 {
+    color: white;
+    width: 500px;
+    background-color: #953030;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    box-shadow: 1px 1px 10px black;
     border: 2px solid white;
 }
 
 
-h1 {
+h1.todo {
     color: white;
     text-shadow: 2px 2px 2px black;
-    margin-left: 15.3rem;
+    font-size: 4em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+h1.done {
+    color: white;
+    text-shadow: 2px 2px 2px black;
     font-size: 4em;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
@@ -36,23 +63,111 @@ h3 {
     margin-left: 4.2%;
 }
 
+.message {
+
+    margin-left:1.2em;
+    width: 400px;
+    word-wrap: break-word;
+}
+
 li {
+
     list-style-type: none;
     display: inline-block;
     padding-left: 20px; 
+    padding-top: 10px;
     padding-bottom: 30px;
 }
 
 .line {
     width: 90%;
     border:2px solid white;
+    margin-top: 2em;
 }
 
-button {
+input.checkbox {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-top: 20px; 
+    background: none;
+    border: none;
+    outline: none;
+    padding: none;
+    
+}
+
+button.trash {
+    display: inline-block;
+    margin-right: -30px;
+    margin-top: 19.7px; 
+    background: none;
+    border: none;
+    outline: none;
+    padding: none;
+    
 }
 
 .check {
-    margin-left: 40px;
+    margin-left: 1.2em;
+    float: left;
+}
+
+.check1 {
+    margin-left: 1.2em;
+    margin-top: -0.6em;
+}
+
+form.edit_button {
+    margin-left: 3.5em;
+    display: inline-block;
+
+}
+
+input.edit_button {
+    width: 5em;
+}
+
+form.delete_button {
+    margin-left: 3.5em;
+    display: inline-block;
+
+}
+
+input.delete_button {
+    width: 5em;
+}
+
+form.todos_button {
+    margin-left: 3.5em;
+    display: inline-block;
+}
+
+input.todos_button {
+    width: 5em;
+}
+
+input.editTitle{
+    display: block;
+    margin-top: 20px;
+}
+
+span.editMessage {
+    margin-top: 20px;
+}
+
+textarea.editMessage{
+    display: block;
+    margin-top: 10px;
+    width: 400px;
+    height: 150px;
+}
+
+select.editCompletion{
+    display: block;
+    margin-top: 20px;
+}
+
+img {
+    height: 24px;
+    width: 24px;
 }

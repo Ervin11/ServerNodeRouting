@@ -1,0 +1,26 @@
+html(lang='en')
+  head
+    title Users
+    style
+      include style.css
+
+  body
+    .container1  
+      h1.todo Users
+      .col
+        each val in users  
+          ul
+            h3= val.user_id + ' : ' + val.firstname + ' ' + val.lastname
+
+
+            li.index Created at : #{val.created_at}
+            li.index Updated at : #{val.updated_at}
+          
+          form.edit_button(method="GET" action=`/users/${val.user_id}/edit`)
+              input.edit_button(type="submit" value="Edit")
+          
+          form.todos_button(method="GET" action=`/users/${val.user_id}/todos`)
+              input.todos_button(type="submit" value="To-dos")
+          
+          form.delete_button(method="POST" action=`/users/${val.user_id}?_method=DELETE`)
+              input.delete_button(type="submit" value="Delete")

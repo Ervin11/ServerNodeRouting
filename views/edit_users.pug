@@ -1,0 +1,56 @@
+html(lang='en')
+  head
+    title Todos
+    style
+      include style.css
+
+  body
+    .container1  
+
+    if route == '/users/:userId/edit'
+
+      h1.todo Edit User
+      .col
+        each val in users  
+          ul
+            form.edit(method="POST" action=`/users/${val.user_id}?_method=PATCH`)
+
+                span.editTitle Firstname
+                input.editTitle(type='text', name="firstname", value=val.firstname)
+                br
+                span.editTitle Lastname
+                input.editTitle(type='text', name="lastname", value=val.lastname)
+                br
+                span.editTitle Username
+                input.editTitle(type='text', name="username", value=val.username)
+                br
+                span.editTitle Password
+                input.editTitle(type='text', name="password")
+                br
+                span.editTitle Email
+                input.editTitle(type='text', name="email", value=val.email)
+                br
+                input(type="submit" value="Submit")        
+    else
+
+      h1.todo Add User
+      .col
+        ul
+            form.edit(method="POST" action=`/users`)
+
+                span.editTitle Firstname
+                input.editTitle(type='text', name="firstname")
+                br
+                span.editTitle Lastname
+                input.editTitle(type='text', name="lastname")
+                br
+                span.editTitle Username
+                input.editTitle(type='text', name="username")
+                br
+                span.editTitle Password
+                input.editTitle(type='text', name="password")
+                br
+                span.editTitle Email
+                input.editTitle(type='text', name="email")
+                br
+                input(type="submit" value="Submit")              

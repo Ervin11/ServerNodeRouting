@@ -1,0 +1,25 @@
+html(lang='en')
+  head
+    title Todos
+    style
+      include style.css
+
+  body
+    .container1  
+      h1.todo Users
+      
+      form.add(method="GET" action=`/users/add`)
+        input(type="submit" value="Add")
+      
+      .col
+        each val in users
+          ul
+            h3= val.user_id + ' : ' + val.firstname + ' ' + val.lastname + ' - ' + val.username
+
+            li.index Created at : #{val.created_at}
+            li.index Updated : #{val.updated_at}
+            
+            form.check1(method="GET" action=`/users/${val.user_id}`)
+              input(type="submit" value="Show")
+            
+            .line 

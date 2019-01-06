@@ -1,0 +1,36 @@
+html(lang='en')
+  head
+    title Todos
+    style
+      include style.css
+
+  body
+    .container1  
+      h1.todo To-do
+
+      form.add(method="GET" action=`/todos/add`)
+        input(type="submit" value="Add") 
+
+      form.add(method="GET" action=`/users`)
+        input(type="submit" value="Users")
+
+      .col
+        each val in todo
+          ul
+            h3= val.id + ' : ' + val.title
+
+            .message
+              p= val.message 
+
+            li.index Start : #{val.created_at}
+            li.index Status : #{val.completion}
+            li.index Updated : #{val.updated_at}
+
+            form.check(method="GET" action=`/todos/${val.id}`)
+              input(type="submit" value="Show") 
+          
+            .line
+          
+            
+
+          
