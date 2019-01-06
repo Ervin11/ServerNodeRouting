@@ -2,7 +2,7 @@
 
 Site de visualisation de tâches à faire :
 
-Users
+# Users
 
 - Création d'utilisateur
 - Modification d'utilisateur
@@ -14,7 +14,7 @@ Users
 - Suppression d'un utilisateur : Bouton Delete
 - Visualisation des todos d'un utilisateur : /users/:userId/todos : Bouton To-dos
 
-To dos
+# To dos
 
 - Création de tâches
 - Modification de tâches
